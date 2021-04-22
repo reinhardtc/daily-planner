@@ -13,41 +13,65 @@ var hour10Am = document.querySelector('.time10').textContent;
 hour10Am = parseInt(hour10Am[1]) + 10;
 var text10am = document.querySelector('.hr10');
 
-var hour9Am = document.querySelector('.time9').textContent;
-hour9Am = parseInt(hour9Am[1]) + 10;
-var text9am = document.querySelector('.hr9');
+var hour11Am = document.querySelector('.time11').textContent;
+hour11Am = parseInt(hour11Am[1]) + 10;
+var text11am = document.querySelector('.hr11');
 
-var hour9Am = document.querySelector('.time9').textContent;
-hour9Am = parseInt(hour9Am[2]) + 10;
-var text9am = document.querySelector('.hr9');
+var hour12Pm = document.querySelector('.time12').textContent;
+hour12Pm = parseInt(hour12Pm[1]) + 10;
+var text12Pm = document.querySelector('.hr12');
 
-var hour9Am = document.querySelector('.time9').textContent;
-hour9Am = parseInt(hour9Am[0]);
-var text9am = document.querySelector('.hr9');
+var hour1Pm = document.querySelector('.time1').textContent;
+hour1Pm = parseInt(hour1Pm[0]) + 12;
+var text1Pm = document.querySelector('.hr1');
 
-var hour9Am = document.querySelector('.time9').textContent;
-hour9Am = parseInt(hour9Am[0]);
-var text9am = document.querySelector('.hr9');
+var hour2Pm = document.querySelector('.time2').textContent;
+hour2Pm = parseInt(hour2Pm[0]) + 12;
+var text2Pm = document.querySelector('.hr2');
 
-var hour9Am = document.querySelector('.time9').textContent;
-hour9Am = parseInt(hour9Am[0]);
-var text9am = document.querySelector('.hr9');
+var hour3Pm = document.querySelector('.time3').textContent;
+hour3Pm = parseInt(hour3Pm[0]) + 12;
+var text3Pm = document.querySelector('.hr3');
 
-var hour9Am = document.querySelector('.time9').textContent;
-hour9Am = parseInt(hour9Am[0]);
-var text9am = document.querySelector('.hr9');
+var hour4Pm = document.querySelector('.time4').textContent;
+hour4Pm = parseInt(hour4Pm[0]) + 12;
+var text4Pm = document.querySelector('.hr4');
 
-var hour9Am = document.querySelector('.time9').textContent;
-hour9Am = parseInt(hour9Am[0]);
-var text9am = document.querySelector('.hr9');
+var hour5Pm = document.querySelector('.time5').textContent;
+hour5Pm = parseInt(hour5Pm[0]) + 12;
+var text5Pm = document.querySelector('.hr5');
 
 // function to update current day at top of the screen
 function dateDisplay() {
   currentDayEl.textContent = moment().format('MMM Do YYYY');
 }
 
+var hours = [hour9Am, hour10Am, hour11Am, hour12Pm, hour1Pm, hour2Pm, hour3Pm, hour4Pm, hour5Pm];
+var textAreaArr = [
+  text9am,
+  text10am,
+  text11am,
+  text12Pm,
+  text1Pm,
+  text2Pm,
+  text3Pm,
+  text4Pm,
+  text5Pm,
+];
+
 // show time blocks in corresponding colors, if they are in the past, present, or future
 
+function setColor() {
+  for (var i = 0; i < hours.length; i++) {
+    if (currentTime < hours[i]) {
+      textAreaArr[i].classList.add('future');
+    } else if (currentTime === hours[i]) {
+      timeBlockEl[i].classList.add('present');
+    } else {
+      timeBlockEl[i].classList.add('past');
+    }
+  }
+}
 // when save icon is clicked, event is saved to local storage
 
 $('.btn9').on('click', function () {
@@ -105,8 +129,4 @@ $('.btn5').on('click', function () {
 $('.hr5').val(localStorage.getItem('5:00 PM'));
 
 dateDisplay();
-
-function showCurrentTime() {
-  var now = moment().hour;
-  console.log(now);
-}
+setColor();
