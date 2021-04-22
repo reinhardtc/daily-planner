@@ -37,6 +37,7 @@ function dateDisplay() {
   currentDayEl.textContent = moment().format('MMM Do YYYY');
 }
 
+// arrays to hold parsed hours and text areas
 var hours = [hour9Am, hour10Am, hour11Am, hour12Pm, hour1Pm, hour2Pm, hour3Pm, hour4Pm, hour5Pm];
 var textAreaArr = [
   { text9am: '.hr9' },
@@ -50,7 +51,7 @@ var textAreaArr = [
   { text5Pm: '.hr5' },
 ];
 
-// show time blocks in corresponding colors, if they are in the past, present, or future
+// show time blocks in corresponding colors, if they are in the past, present, or future by comparing current time to hours array
 
 function setColor() {
   for (var i = 0; i < hours.length; i++) {
