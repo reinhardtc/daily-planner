@@ -26,7 +26,6 @@ textarea {
 }
 
 .time-block {
-  text-align: center;
   border-radius: 15px;
 }
 
@@ -65,18 +64,15 @@ textarea {
   color: white;
 }
 
-.saveBtn i:hover {
+.saveBtn:hover {
   font-size: 20px;
   transition: all 0.25s ease-in-out;
   color: #000;
 }
 
-.saveBtn i {
+.saveBtn {
   color: white;
   align-items: center;
-  padding-right: 50%;
-  padding-left: 36%;
-  padding-top: 15px;
 }
 
 .lead {
