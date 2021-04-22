@@ -29,6 +29,10 @@ textarea {
   border-radius: 15px;
 }
 
+.time-block:focus {
+  outline: none;
+}
+
 .row {
   white-space: pre-wrap;
   height: 80px;
@@ -69,6 +73,10 @@ textarea {
   font-size: 20px;
   transition: all 0.25s ease-in-out;
   color: #000;
+}
+
+.saveBtn:focus {
+  outline: none;
 }
 
 .lead {
