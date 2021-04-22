@@ -8,7 +8,7 @@ textarea {
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
+  color: #000000 !important;
   border-left: 1px solid black;
   padding: 10px;
 }
@@ -33,6 +33,7 @@ textarea {
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;
+  position: relative;
 }
 
 .hour {
@@ -68,11 +69,6 @@ textarea {
   font-size: 20px;
   transition: all 0.25s ease-in-out;
   color: #000;
-}
-
-.saveBtn {
-  color: white;
-  align-items: center;
 }
 
 .lead {
