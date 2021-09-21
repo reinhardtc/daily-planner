@@ -8,4 +8,4 @@ CSS
 JavaScript/JQuery
 
 
-![image](![image](https://user-images.githubusercontent.com/25352227/115788309-113d2900-a389-11eb-863b-3f91ffdb3201.png)
+(![image](https://user-images.githubusercontent.com/25352227/115788309-113d2900-a389-11eb-863b-3f91ffdb3201.png)
